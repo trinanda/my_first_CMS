@@ -6,6 +6,6 @@ def bikin_aplikasi():
 
     @objek_flask.route('/')
     def pertama():
-        return 'hello'
+        return 'hello world'
 
     return objek_flask
