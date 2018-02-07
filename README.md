@@ -2,11 +2,11 @@
 This my first CMS using Python-flask
 
 ### 1. Main module
-    1.1 import objek Flask
-    1.2 Buat sebuah fungsi untuk menampung objek aplikasi, dont forget to return it
-    1.3 panggil objek __main__ flask
-    1.4 Buat route
-    1.5 Make a function,and return what you will need i.e render template
+       *-*. import objek Flask
+       *-*. Buat sebuah fungsi untuk menampung objek aplikasi, dont forget to return it
+       *-*. panggil objek __main__ flask
+       *-*. Buat route
+       *-*. Make a function,and return what you will need i.e render template
     
     
 ### 2. Konfigurasi Docker
