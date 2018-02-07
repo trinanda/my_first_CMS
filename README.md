@@ -5,8 +5,9 @@ This my first CMS using Python-flask
     1.1 import objek Flask
     1.2 Buat sebuah fungsi untuk menampung objek aplikasi, dont forget to return it
     1.3 panggil objek __main__ flask
-    1.4 Buat route
-    1.5 Make a function,and return what you will need i.e render template
+    1.4 panggil file settings dengan variable objek Flask
+    1.5 Buat route
+    1.6 Make a function,and return what you will need i.e render template
     
     
 ### 2. Konfigurasi Docker
@@ -34,6 +35,18 @@ This my first CMS using Python-flask
          *-*. buat volumes akan di mount ke mana, defaultnya 'var/lib/postgresql/data'
          *-*. buat ports postgre, host:docker
 ### 3. Templates
-    3.1 index.html
+    3.1 base-template.html
         #1. Cari templates yang sesuai, masukan scriptnya ke file index
+        #2. Jadikan base-template dengan jinja2:
+            *-* {% block content %}
+            *-* {% endblock %}
+    3.2 template lain untuk me render ke base-template.html, i.e index.html:
+        *-*. {% extends "base-template" %}
+        *-*. {% block content %}
+        *-*. {% endblock %}
+        
+    
+### 4. settings.py
+    4.1 DEBUG = True
+        *-*. Langsung me reload jika ada perubahan pada kode
         
