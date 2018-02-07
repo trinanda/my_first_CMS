@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 
 
 def bikin_aplikasi():
@@ -6,6 +6,6 @@ def bikin_aplikasi():
 
     @objek_flask.route('/')
     def pertama():
-        return 'hello'
+        return render_template("index.html")
 
     return objek_flask
