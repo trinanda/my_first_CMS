@@ -7,7 +7,7 @@ This my first CMS using Python-flask
     1.3 panggil objek __main__ flask
     1.4 panggil file settings dengan variable objek Flask
     1.5 Buat route
-    1.6 Make a function,and return what you will need i.e render template
+    1.6 Make a function,and return what you will need e.g render template
     
     
 ### 2. Konfigurasi Docker
@@ -40,7 +40,7 @@ This my first CMS using Python-flask
         #2. Jadikan base-template dengan jinja2:
             *-* {% block content %}
             *-* {% endblock %}
-    3.2 template lain untuk me render ke base-template.html, i.e index.html:
+    3.2 template lain untuk me render ke base-template.html, e.g index.html:
         *-*. {% extends "base-template" %}
         *-*. {% block content %}
         *-*. {% endblock %}
