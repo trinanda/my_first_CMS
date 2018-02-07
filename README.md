@@ -35,7 +35,8 @@ This my first CMS using Python-flask
          *-*. tentukan versi image yang akan digunakan
          *-*. buat environment untuk menampung username dan password
          *-*. buat volumes akan di mount ke mana, defaultnya 'var/lib/postgresql/data'
-         *-*. buat ports postgre, host:docker
+         *-*. buat ports postgre
+            #*# host:docker
 ### 3. Templates
     3.1 base-template.html
         #1. Cari templates yang sesuai
