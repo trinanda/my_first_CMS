@@ -10,3 +10,17 @@ services:
 
     ports:
       - '7575:6565'
+
+
+  service_postgresql_di_dalam_docker:
+    image: 'postgres:9.6'
+
+    environment:
+      POSTGRES_USER: 'cms1'
+      POSTGRES_PASSWORD: '12345'
+
+    volumes:
+      - '/var/lib/postgresql/data'
+
+    ports:
+      - '5433:5432'

@@ -11,21 +11,22 @@ This my first CMS using Python-flask
     
 ### 2. Konfigurasi Docker
     2.1. Dockerfile
-         #1. Tentukan versi,image(sistem operasi yang akan digunakan)
-         #2. Yang memanage / maintenance aplikasi
-         #3. BUAT variable ENVIRONMENT untuk menentukan dimana aplikasi akan di install di dalam docker
-         #4. Tentukan dimana default directory akan terbuka ketika masuk ke dalam docker
-         #5. COPY semua file requirements.txt ke dalam docker
-         #6. Kemudian install semua package yang tercantum di dalam requirements.txt yang berada didalam docker
+         *-*. Tentukan versi,image(sistem operasi yang akan digunakan)
+         *-*. Yang memanage / maintenance aplikasi
+         *-*. update sistem, lalu install libpq-dev (packge python untuk postgresql)
+         *-*. BUAT variable ENVIRONMENT untuk menentukan dimana aplikasi akan di install di dalam docker
+         *-*. Tentukan dimana default directory akan terbuka ketika masuk ke dalam docker
+         *-*. COPY semua file requirements.txt ke dalam docker
+         *-*. Kemudian install semua package yang tercantum di dalam requirements.txt yang berada didalam docker
     2.2. Docker-compose.yaml
-        #1. Tentukan versi docker-compose yang akan digunakan
-        #2. Buat nama service nya
-        #3. Build docker image+semua perintah yang berada pada dockerfile
-        #4. Masukan command yang digunakan untuk menjalankan server
-            *-* server -build host:port --tampilkan-log --reload_jika_ada_perubahan "package.module:function()"
-        #5. Mount current directory ke dalam (target/docker)
-            *-* Jika ada perubahan pada file local/yang di host, maka akan otomatis dikirim ke dalam docker
-        #6. Spesifikasikan ports aplikasi yang berada di host/local dan juga port aplikasi yang di dalam docker
+         *-*. Tentukan versi docker-compose yang akan digunakan
+         *-*. Buat nama service nya
+         *-*. Build docker image+semua perintah yang berada pada dockerfile
+         *-*. Masukan command yang digunakan untuk menjalankan server
+         *-*. server -build host:port --tampilkan-log --reload_jika_ada_perubahan "package.module:function()"
+         *-*. Mount current directory ke dalam (target/docker)
+         *-*.  Jika ada perubahan pada file local/yang di host, maka akan otomatis dikirim ke dalam docker
+         *-*. Spesifikasikan ports aplikasi yang berada di host/local dan juga port aplikasi yang di dalam docker
 ### 3. Templates
     3.1 index.html
         #1. Cari templates yang sesuai, masukan scriptnya ke file index
