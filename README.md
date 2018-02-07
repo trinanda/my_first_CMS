@@ -36,7 +36,7 @@ This my first CMS using Python-flask
          *-*. buat ports postgre, host:docker
 ### 3. Templates
     3.1 base-template.html
-        #1. Cari templates yang sesuai, masukan scriptnya ke file index
+        #1. Cari templates yang sesuai
         #2. Jadikan base-template dengan jinja2:
             *-* {% block content %}
             *-* {% endblock %}
