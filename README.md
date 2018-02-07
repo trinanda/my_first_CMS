@@ -25,8 +25,14 @@ This my first CMS using Python-flask
          *-*. Masukan command yang digunakan untuk menjalankan server
          *-*. server -build host:port --tampilkan-log --reload_jika_ada_perubahan "package.module:function()"
          *-*. Mount current directory ke dalam (target/docker)
-         *-*.  Jika ada perubahan pada file local/yang di host, maka akan otomatis dikirim ke dalam docker
+         *-*. Jika ada perubahan pada file local/yang di host, maka akan otomatis dikirim ke dalam docker
          *-*. Spesifikasikan ports aplikasi yang berada di host/local dan juga port aplikasi yang di dalam docker
+         *-*. ------------------------------------
+         *-*. Buat service baru untuk postgresql
+         *-*. tentukan versi image yang akan digunakan
+         *-*. buat environment untuk menampung username dan password
+         *-*. buat volumes akan di mount ke mana, defaultnya 'var/lib/postgresql/data'
+         *-*. buat ports postgre, host:docker
 ### 3. Templates
     3.1 index.html
         #1. Cari templates yang sesuai, masukan scriptnya ke file index
