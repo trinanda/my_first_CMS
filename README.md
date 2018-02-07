@@ -29,6 +29,7 @@ This my first CMS using Python-flask
          *-*. Mount directory aplikasi yang di host(local) ke dalam (target/docker (aplikasi_docker)) 
             #*#. Jika ada perubahan pada file local/yang di host, maka akan otomatis dikirim ke dalam docker
          *-*. Spesifikasikan ports aplikasi yang berada di host/local dan juga port aplikasi yang di dalam docker
+            #*# This must be same with server port on the above
          *-*. ------------------------------------
          *-*. Buat service baru untuk postgresql
          *-*. tentukan versi image yang akan digunakan
