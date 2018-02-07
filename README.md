@@ -26,7 +26,7 @@ This my first CMS using Python-flask
          *-*. Build docker image+semua perintah yang berada pada dockerfile
          *-*. Masukan command yang digunakan untuk menjalankan server
          *-*. server -build host:port --tampilkan-log --reload_jika_ada_perubahan "package.module:function()"
-         *-*. Mount directory aplikasi host(local) ke dalam (target/docker (aplikasi_docker)) 
+         *-*. Mount directory aplikasi yang di host(local) ke dalam (target/docker (aplikasi_docker)) 
          *-*. Jika ada perubahan pada file local/yang di host, maka akan otomatis dikirim ke dalam docker
          *-*. Spesifikasikan ports aplikasi yang berada di host/local dan juga port aplikasi yang di dalam docker
          *-*. ------------------------------------
