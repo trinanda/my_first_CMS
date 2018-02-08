@@ -34,7 +34,7 @@ This my first CMS using Python-flask
          *-*. Buat service baru untuk postgresql
          *-*. tentukan versi image yang akan digunakan
          *-*. buat environment untuk menampung username dan password
-         *-*. buat volumes akan di mount ke mana, defaultnya 'var/lib/postgresql/data'
+         *-*. buat volumes untuk/akan di mount/diletakkan ke mana data postgres akan di simpan, usualy di kenal dengan nama postgres and default it stored on 'var/lib/postgresql/data'
          *-*. buat ports postgre, host:docker
 ### 3. Templates
     3.1 base-template.html
@@ -49,6 +49,21 @@ This my first CMS using Python-flask
         
     
 ### 4. settings.py
-    4.1 DEBUG = True
-        *-*. Langsung me reload jika ada perubahan pada kode
+    *-* DEBUG = True
+        #*# Langsung me reload jika ada perubahan pada kode
+    *-* SQLALCHEMY_DATABASE_URI = 'driver/username:password@postgre_servicename_from_docker/database_name' 
+        #*# To connec python with postgre
+    *-* SQLALCHEMY_TRACK_MODIFICATIONS = ''
+        #*# This will track modifications of objects, this requires extra memory and should be disabled(False) if not needed
+        
+### 5. requirements.txt
+    *-* flask
+        A microfremwork for python, that can develop web aplication
+    *-* gunicorn
+        A Python WSGI HTTP server 
+        #*# WSGI function is how to web server communicate with web aplication
+    *-* psycopg2
+        This is the most popular postgresql adapter for Python, this serves to communicated python with postgre
+    *-* flask-sqlalchemy
+        ORM package for python-flask, flask-sqlalchemy berfungsi untuk lebih mempermudah penggunaan sqlalchemy untuk flask
         
