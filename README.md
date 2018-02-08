@@ -3,15 +3,19 @@ This my first CMS using Python-flask
 
 ### 1. Main module
     1.1 import objek Flask
-    1.2 Buat sebuah fungsi untuk menampung objek aplikasi
-    1.3 panggil objek __main__ flask, dont forget to return it
+    1.2 Make a function to store object aplication that you created 
+    1.3 call __main__ object from flask, dont forget to return it
     1.4 panggil file settings dengan variable objek Flask
         *-*. objek_flask.config.from_pyfile('settings.py')
+    1.5 import what you'll need from models
+    1.6 
+    
+    
     1.5 Buat route
     1.6 Make a function,and return what you will need e.g render template
     
     
-### 2. Konfigurasi Docker
+### 2. Docker Configurations
     2.1. Dockerfile
          *-*. Tentukan versi,image(sistem operasi yang akan digunakan)
          *-*. Yang memanage / maintenance aplikasi
@@ -51,7 +55,7 @@ This my first CMS using Python-flask
 ### 4. settings.py
     *-* DEBUG = True
         #*# Langsung me reload jika ada perubahan pada kode
-    *-* SQLALCHEMY_DATABASE_URI = 'driver/username:password@postgre_servicename_from_docker/database_name' 
+    *-* SQLALCHEMY_DATABASE_URI = 'driver://username:password@postgre_servicename_from_docker/database_name' 
         #*# To connec python with postgre
     *-* SQLALCHEMY_TRACK_MODIFICATIONS = ''
         #*# This will track modifications of objects, this requires extra memory and should be disabled(False) if not needed
@@ -66,4 +70,11 @@ This my first CMS using Python-flask
         This is the most popular postgresql adapter for Python, this serves to communicated python with postgre
     *-* flask-sqlalchemy
         ORM package for python-flask, flask-sqlalchemy berfungsi untuk lebih mempermudah penggunaan sqlalchemy untuk flask
+
+### 6. Alembic Configurations
+    6.1 initialize alembic init
+    6.2 go to alembic.ini file, then config on sqlalchemy.url
+        #*# sqlalchemy.url function is a url to conect to the database via SQLAlchemy
+    6.3 On folder you have initialize on above, go to env.py, then config on target_metadata
+        #*# as you can see on that file, you need to create new module that called models.py, function for this file is to create table to database\
         
