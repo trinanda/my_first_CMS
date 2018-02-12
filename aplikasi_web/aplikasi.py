@@ -1,13 +1,12 @@
 from flask import Flask, render_template
 
 
-
 def bikin_aplikasi():
     objek_flask = Flask(__name__)
 
     objek_flask.config.from_pyfile('settings.py')
 
-    from aplikasi_web.models import database, Page, Posting
+    from aplikasi_web.models import database, Page, Post
 
     database.init_app(objek_flask)
 

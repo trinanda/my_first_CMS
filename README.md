@@ -8,13 +8,11 @@ This my first CMS using Python-flask
     1.4 panggil file settings dengan variable objek Flask
         *-*. objek_flask.config.from_pyfile('settings.py')
     1.5 import what you'll need from models
-    1.6 
-    
-    
+    1.6 then insert your variable_flask_objek to database using *init_app()*
+        *-* ini berfungsi untuk saling menghubungkan aplikasi dengan models(tables pada database)
     1.5 Buat route
     1.6 Make a function,and return what you will need e.g render template
-    
-    
+        *-* pada function ini masukan apa saja yang ingin ditampilkan pada webpage
 ### 2. Docker Configurations
     2.1. Dockerfile
          *-*. Tentukan versi,image(sistem operasi yang akan digunakan)

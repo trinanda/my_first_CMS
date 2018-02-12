@@ -8,7 +8,8 @@ class Page(database.Model):
     id = Column(Integer, primary_key=True)
     title = Column(String)
 
-class Posting(database.Model):
-    __tablename__ = 'Posting'
+class Post(database.Model):
+    __tablename__ = 'Post'
     id = Column(Integer, primary_key=True)
     title = Column(String)
+
