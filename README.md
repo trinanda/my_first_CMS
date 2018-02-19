@@ -2,9 +2,9 @@
 This my first CMS using Python-flask
 
 ### 1. Main module
-    1.1 import objek Flask
+    1.1 import objek Flask, and others
     1.2 Make a function to store object aplication that you created 
-    1.3 call __main__ object from flask, dont forget to return it
+    1.3 call __main__ object from flask, store it to a variable and dont forget to return it
     1.4 panggil file settings dengan variable objek Flask
         *-*. objek_flask.config.from_pyfile('settings.py')
     1.5 import what you'll need from models
@@ -72,7 +72,9 @@ This my first CMS using Python-flask
 ### 6. Alembic Configurations
     6.1 initialize alembic init
     6.2 go to alembic.ini file, then config on sqlalchemy.url
-        #*# sqlalchemy.url function is a url to conect to the database via SQLAlchemy
+        #*# sqlalchemy.url function is a url to conect alembic to the database via SQLAlchemy
     6.3 On folder you have initialize on above, go to env.py, then config on target_metadata
-        #*# as you can see on that file, you need to create new module that called models.py, function for this file is to create table to database\
+        #*# as you can see on that file, you need to create new module that called models.py, function for this file is to create table to database
+        #*# the imported will be not found, so..you must interact with interpreter
+        #*# the way is, import sys module, then call path "path" list, and the "append" the package that you store your models
         

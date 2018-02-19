@@ -6,6 +6,7 @@ def bikin_aplikasi():
 
     objek_flask.config.from_pyfile('settings.py')
 
+
     from aplikasi_web.models import database, Page, Post
 
     database.init_app(objek_flask)
