@@ -1,6 +1,5 @@
 from flask import Flask, render_template
 
-
 def bikin_aplikasi():
     objek_flask = Flask(__name__)
 

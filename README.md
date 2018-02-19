@@ -2,7 +2,7 @@
 This my first CMS using Python-flask
 
 ### 1. Main module
-    1.1 import objek Flask, and others
+    1.1 import objek Flask, and others what you'll need
     1.2 Make a function to store object aplication that you created 
     1.3 call __main__ object from flask, store it to a variable and dont forget to return it
     1.4 panggil file settings dengan variable objek Flask
@@ -68,7 +68,9 @@ This my first CMS using Python-flask
         This is the most popular postgresql adapter for Python, this serves to communicated python with postgre
     *-* flask-sqlalchemy
         ORM package for python-flask, flask-sqlalchemy berfungsi untuk lebih mempermudah penggunaan sqlalchemy untuk flask
-
+    *-* alembic
+        this tools for migrations database, such.. adding column to table, etc..
+    
 ### 6. Alembic Configurations
     6.1 initialize alembic init
     6.2 go to alembic.ini file, then config on sqlalchemy.url
