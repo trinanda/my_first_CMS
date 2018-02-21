@@ -1,16 +1,22 @@
-{% extends "base-template.html" %}
-{% block content %}
-  <header class="masthead" style="background-image: url('http://localhost/images/RirxVjH.jpg')">
-        <div class="overlay"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-md-10 mx-auto">
-                    <div class="site-heading">
-                        <h1>{{ HALAMAN_DEPAN|safe }}</h1>
-                        <!--<span class="subheading">{{ HALAMAN_DEPAN_2 }}</span>-->
+<html>
+<head>
+    <title>{{ TITLE }}</title>
+</head>
+<body>
+    {% extends "base-template.html" %}
+    {% block content %}
+      <header class="masthead" style="background-image: url('http://localhost/images/RirxVjH.jpg')">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-md-10 mx-auto">
+                        <div class="site-heading">
+                            <h1 style="font-size:32px;">{{ HALAMAN_DEPAN|safe }}</h1>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </header>
-{% endblock %}
+        </header>
+    {% endblock %}
+</body>
+</html>

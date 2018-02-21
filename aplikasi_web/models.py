@@ -7,6 +7,7 @@ class Page(database.Model):
     __tablename__ = 'Page'
     id = Column(Integer, primary_key=True)
     title = Column(String)
+    content = Column(String)
 
 class Post(database.Model):
     __tablename__ = 'Post'

@@ -10,9 +10,13 @@ This my first CMS using Python-flask
     1.5 import what you'll need from models
     1.6 then insert your variable_flask_objek to database using *init_app()*
         *-* ini berfungsi untuk saling menghubungkan aplikasi dengan models(tables pada database)
-    1.5 Buat route
-    1.6 Make a function,and return what you will need e.g render template, etc..
-        *-* pada function ini masukan apa saja yang ingin ditampilkan pada webpage
+    1.7 make your flask-admin objek
+        admin=Admin(your_flask_objek, name='your dashboard name', and template_mode='sampai sekarang flask-admin hanya support bootstrap3')
+    1.8 Buat route
+    1.9 Make a function,and return what you will need e.g render template, etc..
+        *-* pada function ini masukan apa saja yang ingin ditampilkan pada webpage, as an example:
+        *-* page = Page.query.filter_by(id=1).first()
+    
 ### 2. Docker Configurations
     2.1. Dockerfile
          *-*. Tentukan versi,image(sistem operasi yang akan digunakan)
@@ -70,6 +74,8 @@ This my first CMS using Python-flask
         ORM package for python-flask, flask-sqlalchemy berfungsi untuk lebih mempermudah penggunaan sqlalchemy untuk flask
     *-* alembic
         this tools for migrations database, such.. adding column to table, etc..
+    *-* flask-admin
+        package fro customize your flask application back-end (CRUD)
     
 ### 6. Alembic Configurations
     6.1 initialize alembic init
