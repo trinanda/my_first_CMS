@@ -80,3 +80,11 @@ This my first CMS using Python-flask
         #*# the imported will be not found, so..you must interact with interpreter
         #*# the way is, import sys module, then call path "path" list, and the "append" the package that you store your models
         
+### 7. Prototype Application
+    7.1 if your aplications still prototype, you don't need versions file migrations as much
+        #*# but if your aplication on deploy or sudah di serahkah ke tangan user, maka perubahan data perlu di kembangkan sedikit demi sedikit
+        #*# maka dari itu, buat lah file reset_migrations.sh
+            #*# on this file, first.. * you need to downgrade base on alembic
+                                      * then remove versions files on alembic directory
+                                      * alembic revision (initialize your db)
+                                      * and then upgrade your db to the new versions
