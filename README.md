@@ -12,6 +12,8 @@ This my first CMS using Python-flask
         *-* ini berfungsi untuk saling menghubungkan aplikasi dengan models(tables pada database)
     1.7 make your flask-admin objek
         admin=Admin(your_flask_objek, name='your dashboard name', and template_mode='sampai sekarang flask-admin hanya support bootstrap3')
+    1.8 add model view, model view are form from our models (table)
+        *-* admin.add_view(ModelView(table_from_models, db.sessions))
     1.8 Buat route
     1.9 Make a function,and return what you will need e.g render template, etc..
         *-* pada function ini masukan apa saja yang ingin ditampilkan pada webpage, as an example:
@@ -31,7 +33,7 @@ This my first CMS using Python-flask
          *-*. Buat nama service untuk aplikasi
          *-*. Build docker image+semua perintah yang berada pada dockerfile
          *-*. Masukan command yang digunakan untuk menjalankan server
-         *-*. server -build host:port --tampilkan-log --reload_jika_ada_perubahan "package.module:function()"
+            #*#. server (gunicorn) -build host:port --tampilkan-log --reload_jika_ada_perubahan "package.module:function()"
          *-*. Mount directory aplikasi yang di host(local) ke dalam (target/docker (aplikasi_docker)) 
             #*#. Jika ada perubahan pada file local/yang di host, maka akan otomatis dikirim ke dalam docker
          *-*. Spesifikasikan ports aplikasi yang berada di host/local dan juga port aplikasi yang di dalam docker
@@ -61,7 +63,9 @@ This my first CMS using Python-flask
         #*# To connec python with postgre
     *-* SQLALCHEMY_TRACK_MODIFICATIONS = ''
         #*# This will track modifications of objects, this requires extra memory and should be disabled(False) if not needed
-        
+    *-* SECRET_KEY = 'yourScreetKey'
+        #*# this config you needed if you were using flask-admin
+       
 ### 5. requirements.txt
     *-* flask
         A microfremwork for python, that can develop web aplication
