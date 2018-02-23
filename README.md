@@ -88,7 +88,7 @@ This my first CMS using Python-flask
     6.3 On folder you have initialize on above, go to env.py, then config on target_metadata
         #*# as you can see on that file, you need to create new module that called models.py, function for this file is to create table to database
         #*# the imported will be not found, so..you must interact with interpreter
-        #*# the way is, import sys module, then call path "path" list, and the "append" the package that you store your models
+        #*# the way is, import sys module, then call path "path" list, and then "append" the package that you store your models
         
 ### 7. Prototype Application
     7.1 if your aplications still prototype, you don't need versions file migrations as much
