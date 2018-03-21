@@ -21,3 +21,6 @@ class PageModelView(ModelView):
     create_template = 'admin/ckeditor.html'
     edit_template = 'admin/ckeditor.html'
     column_list = ('title', 'tag', 'url')
+
+class MenuModelView(ModelView):
+    pass

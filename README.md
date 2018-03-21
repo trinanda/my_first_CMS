@@ -7,15 +7,19 @@ This my first CMS using Python-flask
     1.3 call __main__ object from flask, store it to a variable and dont forget to return it
     1.4 panggil file settings dengan variable objek Flask
         *-*. objek_flask.config.from_pyfile('settings.py')
-    1.5 import what you'll need from models
+    1.5 import what you'll need from models, such.. database.., page.., menu.. etc..
     1.6 then insert your variable_flask_objek to database using *init_app()*
         *-* ini berfungsi untuk saling menghubungkan aplikasi dengan models(tables pada database)
     1.7 make your flask-admin objek
-        admin=Admin(your_flask_objek, name='your dashboard name', and template_mode='sampai sekarang flask-admin hanya support bootstrap3')
-    1.8 for administrative views, add model view, model view are form from our models (table)
-        *-* admin.add_view(ModelView(table_from_models, db.sessions))
+        admin=Admin(your_flask_objek, name='your dashboard name', and template_mode='sampai pada saat aplikasi ini dibuat, flask-admin baru hanya support bootstrap3')
+    1.8 for administrative views.., add model view, model view are form from our models (table)
+        *-* for example: admin.add_view(PageModelView(table_from_models, db.sessions))
+        *-* and other add_view that you'll need
     1.8 Buat route
-    1.9 Make a function,and return what you will need e.g render template, etc..
+        *-* for route.. you need to declare url that you called from model
+            #*# format for this route is like this: @object_flask_name.route('/<url>')
+    1.9 Make a function, and insert the an url argument, and the argument is None
+    and return what you will need e.g render template, etc..
         *-* pada function ini masukan apa saja yang ingin ditampilkan pada webpage, as an example:
         *-* page = Page.query.filter_by(id=1).first()
     

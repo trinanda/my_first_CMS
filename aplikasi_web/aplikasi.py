@@ -2,7 +2,7 @@ from flask import Flask, render_template
 from flask_admin import Admin
 from flask_admin.contrib.sqla import ModelView
 
-from aplikasi_web.views import PageModelView
+from aplikasi_web.views import PageModelView, MenuModelView
 
 
 def bikin_aplikasi():
@@ -16,7 +16,7 @@ def bikin_aplikasi():
 
     admin = Admin(objek_flask, name='Administrator', template_mode='bootstrap3')
     admin.add_view(PageModelView(Page, database.session))
-    admin.add_view(ModelView(Menu, database.session))
+    admin.add_view(MenuModelView(Menu, database.session))
 
     @objek_flask.route('/')
     @objek_flask.route('/<url>')
