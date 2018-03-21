@@ -2,7 +2,7 @@ FROM python:3.7.0a4-stretch
 
 MAINTAINER Tri Nanda <zidanecr7kaka@gmail.com>
 
-RUN apt-get update && apt-get install libpq-dev
+RUN apt-get update && apt-get install -y build-essential libpq-dev
 
 ENV INSTALL_PATH_DI_DALAM_DOCKER /aplikasi_web_docker
 

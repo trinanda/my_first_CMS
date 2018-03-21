@@ -12,7 +12,7 @@ This my first CMS using Python-flask
         *-* ini berfungsi untuk saling menghubungkan aplikasi dengan models(tables pada database)
     1.7 make your flask-admin objek
         admin=Admin(your_flask_objek, name='your dashboard name', and template_mode='sampai sekarang flask-admin hanya support bootstrap3')
-    1.8 add model view, model view are form from our models (table)
+    1.8 for administrative views, add model view, model view are form from our models (table)
         *-* admin.add_view(ModelView(table_from_models, db.sessions))
     1.8 Buat route
     1.9 Make a function,and return what you will need e.g render template, etc..
