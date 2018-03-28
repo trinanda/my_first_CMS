@@ -19,11 +19,13 @@ def bikin_aplikasi():
     admin.add_view(MenuModelView(Menu, database.session))
 
     @objek_flask.route('/')
-    @objek_flask.route('/<url>')
-    def index(url=None):
-        page = Page()
-        if url is not None:
-            page = Page.query.filter_by(url=url).first()
+    @objek_flask.route('/<uri>')
+    def index(uri=None):
+        print('yang di tes ini', uri)
+        if uri is not None:
+            page = Page.query.filter_by(URL=uri).first()
+        else:
+            pass
 
         content = 'Homepage'
         if page is not None:
@@ -34,3 +36,6 @@ def bikin_aplikasi():
         return render_template('index.html', TITLE='Flask-CMS', CONTENT=content, menu=menu)
 
     return objek_flask
+
+
+

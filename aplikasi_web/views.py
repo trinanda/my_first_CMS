@@ -20,7 +20,7 @@ class PageModelView(ModelView):
     form_overrides = dict(content=CKEditorField)
     create_template = 'admin/ckeditor.html'
     edit_template = 'admin/ckeditor.html'
-    column_list = ('title', 'tag', 'url')
+    column_list = ('title', 'tag')
 
 class MenuModelView(ModelView):
     pass

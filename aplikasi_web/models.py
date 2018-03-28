@@ -10,7 +10,7 @@ class Page(database.Model):
     title = Column(String)
     tag = Column(String)
     content = Column(String)
-    url = Column(String)
+    URL = Column(String)
 
     def __repr__(self):
         return self.title

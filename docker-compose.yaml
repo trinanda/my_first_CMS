@@ -3,13 +3,13 @@ version: '3'
 services:
   aplikasi_web_di_dalam_docker:
     build: .
-    command: gunicorn -b 0.0.0.0:6565 --access-logfile - --reload "aplikasi_web.aplikasi:bikin_aplikasi()"
+    command: gunicorn -b 0.0.0.0:8000 --access-logfile - --reload "aplikasi_web.aplikasi:bikin_aplikasi()"
 
     volumes:
       - '.:/aplikasi_web_docker'
 
     ports:
-      - '7575:6565'
+      - '8989:8000'
 
 
   service_postgresql_di_dalam_docker:

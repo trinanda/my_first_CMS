@@ -18,10 +18,14 @@ This my first CMS using Python-flask
     1.8 Buat route
         *-* for route.. you need to declare url that you called from model
             #*# format for this route is like this: @object_flask_name.route('/<url>')
-    1.9 Make a function, and insert the an url argument, and the argument is None
-    and return what you will need e.g render template, etc..
+    1.9 Make a function, and insert the an url argument, and the argument is None(None is equal to empty)
+        *-* the function of the argmunet </url> // in the function is to memberi nilai url apapun, kosong bisa di handle, 
+            and return what you will need e.g render template, etc..
+        
         *-* pada function ini masukan apa saja yang ingin ditampilkan pada webpage, as an example:
-        *-* page = Page.query.filter_by(id=1).first()
+        
+        *-* and then store to a variable value(Class) from table(models) that you need
+            e.g: page= Page(), this variable function is to make the Page class to be global variable
     
 ### 2. Docker Configurations
     2.1. Dockerfile
@@ -51,9 +55,13 @@ This my first CMS using Python-flask
 ### 3. Templates
     3.1 base-template.html
         #1. Cari templates yang sesuai
-        #2. Jadikan base-template dengan jinja2:
+        #2. Jadikan base-template dengan jinja2 pada bagian yang Anda butuhkan, ini biasanya berada pada element <main></main>:
             *-* {% block content %}
             *-* {% endblock %}
+        #3. Kemudian pada element navigasi buat perulangan for dengan jinja2
+            *-* {% for iterasi untuk elemen_dari_table_yang_ingin_dilakukan_perulangan %}
+                    pada kasus ini, Anda perlu melakukan perulangan pada column URL dan title
+                {% endfor %}
     3.2 template lain untuk me render ke base-template.html, e.g index.html:
         *-*. {% extends "base-template" %}
         *-*. {% block content %}
@@ -84,6 +92,8 @@ This my first CMS using Python-flask
         this tools for migrations database, such.. adding column to table, etc..
     *-* flask-admin
         package fro customize your flask application back-end (CRUD)
+    *-* flask-wtf
+        package for ...
     
 ### 6. Alembic Configurations
     6.1 initialize alembic init
@@ -102,3 +112,15 @@ This my first CMS using Python-flask
                                       * then remove versions files on alembic directory
                                       * alembic revision (initialize your db)
                                       * and then upgrade your db to the new versions
+                                      
+### 8. Models
+    8.1 first thing on module models you must declare SQLAlchemy() object
+    8.2 and then create class to create table to the database, and on this class call your Model from SQLAlchemy object that you have created on the above
+        then add column what you'll need, e.g id, title, name, etc..
+    8.3 in this case, you created two table, Page and Menu
+    8.4 on the table menu, you must add foreign key on column ID to table Page
+    8.5 then add relationship to table page ....
+    
+### 9. Views
+    9.1 on this module yo can add ckEditor for WYSIWYG, this function for edit column content on your dashboard (admin view)
+    9.2 you can also ....
